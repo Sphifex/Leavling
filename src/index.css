@@ -164,3 +164,15 @@
 .glow-glow {
     text-shadow: 0 0 10px rgba(94, 6, 216, 1), 0 0 20px rgba(94, 6, 216, 0.7);
 }
+
+
+/* Flickering Glow Effect for Skills Container */
+@keyframes flicker {
+    0% { box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7; }
+    50% { box-shadow: 0 0 15px #9333ea, 0 0 30px #9333ea; }
+    100% { box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7; }
+}
+
+.flicker-border {
+    animation: flicker 1.5s infinite alternate;
+}
