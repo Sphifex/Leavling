@@ -107,7 +107,7 @@ const SystemUI = () => {
                         </motion.div>
 
                         {/* Extended Bottom Bezel - Placed Outside the Box */}
-                        <div className="absolute bottom-[-40px] left-[-10px] w-[800px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker z-50"></div>
+                        <div className="absolute bottom-[-40px] left-[-30px] w-[800px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker z-50"></div>
                         <div className="absolute bottom-[-40px] left-[-30px] w-[800px] h-10 bg-purple-400 opacity-50 blur-md transform skew-x-[-8deg] flicker z-50"></div>
                         <div className="absolute bottom-[-40px] left-[-35px] w-[800px] h-8 bg-purple-300 opacity-30 blur-lg transform skew-x-[-5deg] flicker z-50"></div>
                     </div>
