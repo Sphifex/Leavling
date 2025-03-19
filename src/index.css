@@ -111,3 +111,35 @@
 }
 
 
+
+/* HOME SCREEN !!!!  */
+
+/* Navigation Button Styles - Bigger & More Glowing */
+/* Navigation Button Styles - Fixed Size & Consistent Look */
+.nav-btn {
+    background: transparent;
+    color: #a855f7;
+    border: 3px solid #a855f7;
+    width: 250px; /* Fixed width */
+    height: 70px; /* Fixed height */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.8), 0 0 25px rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+    transition: all 0.01s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Move button slightly to the right on hover */
+.nav-btn:hover {
+    transform: translateX(15px); /* Moves 15px to the right */
+    color: #c084fc;
+    border-color: #c084fc;
+    text-shadow: 0 0 20px rgba(192, 132, 252, 1);
+    box-shadow: 0 0 20px rgba(192, 132, 252, 1);
+}
+

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import HomePage from "./HomePage"; // Import HomePage component
 
 const SystemUI = () => {
     const [showNotification, setShowNotification] = useState(true);
     const [text, setText] = useState("");
     const [loading, setLoading] = useState(false);
+    const [showHomePage, setShowHomePage] = useState(false); // Control Home Page visibility
+
     const message = "Your heart will stop in 0.02 seconds\nif you chose not to accept. \nWill you accept?";
 
     // Typewriter Effect for Notification Text
@@ -24,31 +27,34 @@ const SystemUI = () => {
         }
     }, [showNotification]);
 
-    // Handle accept button - Leads to the home screen
+    // Handle accept button - Transition to Home Page
     const handleAccept = () => {
         setShowNotification(false);
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-        }, 2000); // 2-second dramatic pause
+            setShowHomePage(true); // Show the home page after the loading animation
+        }, 2000);
     };
 
     // Handle decline button - Redirects to YouTube
     const handleDecline = () => {
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"; // Change this to your preferred link
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
     };
 
     return (
         <div className="min-h-screen bg-black flex items-center justify-center relative">
             <AnimatePresence>
-                {showNotification ? (
+                {showHomePage ? (
+                    <HomePage /> // ✅ Show Home Page after transition
+                ) : showNotification ? (
                     <div className="relative flex items-center justify-center">
-                        {/* Extended Top Bezel - Placed Outside the Box */}
+                        {/* ✅ Extended Top Bezel */}
                         <div className="absolute top-[-40px] left-[-30px] w-[800px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[10deg] flicker z-50"></div>
                         <div className="absolute top-[-40px] left-[-30px] w-[800px] h-10 bg-purple-400 opacity-50 blur-md transform skew-x-[8deg] flicker z-50"></div>
                         <div className="absolute top-[-40px] left-[-35px] w-[800px] h-8 bg-purple-300 opacity-30 blur-lg transform skew-x-[5deg] flicker z-50"></div>
 
-                        {/* System Message Box */}
+                        {/* ✅ System Message Box */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -56,7 +62,7 @@ const SystemUI = () => {
                             transition={{ duration: 1 }}
                             className="relative p-8 w-[750px] h-[400px] text-center system-message overflow-hidden z-10"
                         >
-                            {/* Video Background */}
+                            {/* ✅ Video Background */}
                             <video
                                 autoPlay
                                 loop
@@ -67,11 +73,12 @@ const SystemUI = () => {
                                 <source src="/videos/purple.mp4" type="video/mp4" />
                             </video>
 
+                            {/* ✅ Notification Header */}
                             <div className="relative text-purple-600 text-lg font-bold tracking-widest uppercase border border-purple-400 px-4 py-2 inline-block bg-black bg-opacity-50 neon-notification z-50">
-    NOTIFICATION
-</div>
+                                NOTIFICATION
+                            </div>
 
-                            {/* System Message */}
+                            {/* ✅ System Message */}
                             <p className="relative mt-6 text-purple-400 text-lg typing-effect neon-purple-text z-30">
                                 {text.split("\n").map((line, index) => (
                                     <span key={index}>
@@ -89,11 +96,11 @@ const SystemUI = () => {
                                 ))}
                             </p>
 
-                            {/* Buttons - Lowered */}
+                            {/* ✅ Buttons - Lowered */}
                             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 space-x-20 z-30">
                                 <button
                                     onClick={handleAccept}
-                                    className="accept-btn px-8 py-3  transition-all shadow-lg"
+                                    className="accept-btn px-8 py-3 transition-all shadow-lg"
                                 >
                                     Yes
                                 </button>
@@ -106,7 +113,7 @@ const SystemUI = () => {
                             </div>
                         </motion.div>
 
-                        {/* Extended Bottom Bezel - Placed Outside the Box */}
+                        {/* ✅ Extended Bottom Bezel */}
                         <div className="absolute bottom-[-40px] left-[-30px] w-[800px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker z-50"></div>
                         <div className="absolute bottom-[-40px] left-[-30px] w-[800px] h-10 bg-purple-400 opacity-50 blur-md transform skew-x-[-8deg] flicker z-50"></div>
                         <div className="absolute bottom-[-40px] left-[-35px] w-[800px] h-8 bg-purple-300 opacity-30 blur-lg transform skew-x-[-5deg] flicker z-50"></div>
@@ -120,17 +127,7 @@ const SystemUI = () => {
                     >
                         <p className="text-purple-400 text-2xl">Loading...</p>
                     </motion.div>
-                ) : (
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 2 }}
-                        className="text-center text-white"
-                    >
-                        <h1 className="text-4xl font-bold text-purple-400 neon-text">PLAYER SYSTEM</h1>
-                        <p className="mt-4 text-gray-300">Welcome to your system interface</p>
-                    </motion.div>
-                )}
+                ) : null}
             </AnimatePresence>
         </div>
     );
