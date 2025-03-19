@@ -115,7 +115,7 @@
 /* HOME SCREEN !!!!  */
 
 /* Navigation Button Styles - Bigger & More Glowing */
-/* Navigation Button Styles - Fixed Size & Consistent Look */
+/* Navigation Button Styles */
 .nav-btn {
     background: transparent;
     color: #a855f7;
@@ -127,7 +127,7 @@
     text-align: center;
     text-shadow: 0 0 15px rgba(168, 85, 247, 0.8), 0 0 25px rgba(168, 85, 247, 0.6);
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
-    transition: all 0.01s ease-in-out;
+    transition: transform 0.01s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -7,6 +7,7 @@ const SystemUI = () => {
     const [text, setText] = useState("");
     const [loading, setLoading] = useState(false);
     const [showHomePage, setShowHomePage] = useState(false); // Control Home Page visibility
+    const [progress, setProgress] = useState(0); // Loading bar progress
 
     const message = "Your heart will stop in 0.02 seconds\nif you chose not to accept. \nWill you accept?";
 
@@ -31,10 +32,20 @@ const SystemUI = () => {
     const handleAccept = () => {
         setShowNotification(false);
         setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-            setShowHomePage(true); // Show the home page after the loading animation
-        }, 2000);
+        setProgress(0); // Reset progress
+
+        // Simulate loading progress
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                if (prev >= 100) {
+                    clearInterval(interval);
+                    setLoading(false);
+                    setShowHomePage(true); // Show Home Page after loading
+                    return 100;
+                }
+                return prev + 5; // Adjust speed here
+            });
+        }, 100); // Adjust speed by changing interval time
     };
 
     // Handle decline button - Redirects to YouTube
@@ -125,7 +136,18 @@ const SystemUI = () => {
                         transition={{ duration: 3 }}
                         className="min-h-screen bg-black flex items-center justify-center"
                     >
-                        <p className="text-purple-400 text-2xl">Loading...</p>
+                        <div className="text-center">
+                            <p className="text-purple-400 text-2xl mb-4">Loading...</p>
+                            {/* ✅ Moving Loading Bar */}
+                            <div className="relative w-96 h-4 bg-gray-800 rounded-md overflow-hidden">
+                                <motion.div
+                                    className="h-full bg-purple-500"
+                                    initial={{ width: "0%" }}
+                                    animate={{ width: `${progress}%` }}
+                                    transition={{ duration: .09, ease: "linear" }}
+                                />
+                            </div>
+                        </div>
                     </motion.div>
                 ) : null}
             </AnimatePresence>
