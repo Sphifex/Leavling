@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Subtle Holographic System Message */
+.system-message {
+    background: rgba(0, 0, 0, 0.5); /* Slightly reduce opacity */
+    border: 2px solid  #2a0265  ; /* Lower opacity */
+    box-shadow: 0 0 10px rgba(155, 89, 182, 08); /* Reduce spread & opacity */
+    backdrop-filter: blur(5px); /* Less aggressive blur */
+}
+
+/* Less Intense Bezel Glow */
+.flicker {
+    animation: flicker 1.5s infinite alternate;
+    box-shadow: 0 0 1px rgba(#400167); /* Softer glow */
+}
+
+/* Less Vibrant Glowing Text */
+.neon-text {
+    text-shadow: 0 0 8px rgba(155, 89, 182, 0.4); /* Reduced glow spread */
+}
+
+/* Less Intense Button Glow */
+.neon-glow {
+    box-shadow: 0 0 1px rgba(155, 89, 182, 0.3); /* Reduce intensity */
+}
+
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: rgba(255, 255, 255, 0.75); }
+}
+
+
+/* Glowing Effect for "0.02 seconds" */
+.glowing-text {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 
+                 0 0 20px rgba(255, 0, 0, 0.6), 
+                 0 0 30px rgba(255, 0, 0, 0.4);
+    animation: glowPulseRed 1.5s infinite alternate;
+}
+
+/* Smooth pulsing effect for red glow */
+@keyframes glowPulseRed {
+    0% { text-shadow: 0 0 8px rgba(255, 0, 0, 0.7), 0 0 16px rgba(255, 0, 0, 0.5); }
+    100% { text-shadow: 0 0 12px rgba(255, 0, 0, 1), 0 0 24px rgba(255, 0, 0, 0.8); }
+}
+
+/* Glowing Effect for Purple Text */
+.neon-purple-text {
+    text-shadow: 0 0 10px rgba(128, 0, 255, 0.8), 
+                 0 0 20px rgba(128, 0, 255, 0.6), 
+                 0 0 30px rgba(128, 0, 255, 0.4);
+    animation: glowPulsePurple 1.5s infinite alternate;
+}
+
+/* Smooth pulsing effect for purple glow */
+@keyframes glowPulsePurple {
+    0% { text-shadow: 0 0 8px rgba(128, 0, 255, 0.7), 0 0 16px rgba(128, 0, 255, 0.5); }
+    100% { text-shadow: 0 0 12px rgba(128, 0, 255, 1), 0 0 24px rgba(128, 0, 255, 0.8); }
+}
+
+
+/* Glowing Effect for "NOTIFICATION" */
+.neon-notification {
+    text-shadow: 0 0 10px rgba(128, 0, 255, 0.8),
+                 0 0 20px rgba(128, 0, 255, 0.6),
+                 0 0 30px rgba(128, 0, 255, 0.4);
+    animation: glowPulseNotification 1.5s infinite alternate;
+}
+
+/* Smooth pulsing effect */
+@keyframes glowPulseNotification {
+    0% { text-shadow: 0 0 8px rgba(128, 0, 255, 0.7), 0 0 16px rgba(128, 0, 255, 0.5); }
+    100% { text-shadow: 0 0 12px rgba(128, 0, 255, 1), 0 0 24px rgba(128, 0, 255, 0.8); }
+}
+
+
+
+/* Accept Button - Transparent with Constant Purple Glow */
+.accept-btn {
+    background: transparent;
+    color: #d3b2f1; /* Purple text */
+    border: 2px solid #a855f7; /* Purple border */
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.8), 0 0 16px rgba(168, 85, 247, 0.6), 0 0 24px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.accept-btn:hover {
+    border-color: #c084fc;
+    text-shadow: 0 0 12px rgba(192, 132, 252, 1), 0 0 20px rgba(192, 132, 252, 0.9);
+    box-shadow: 0 0 15px rgba(192, 132, 252, 1);
+}
+
+/* Decline Button - Transparent with Constant Red Glow */
+.decline-btn {
+    background: transparent;
+    color: #f1b2b2; /* Red text */
+    border: 2px solid #f87171; /* Red border */
+    text-shadow: 0 0 8px rgba(248, 113, 113, 0.8), 0 0 16px rgba(248, 113, 113, 0.6), 0 0 24px rgba(248, 113, 113, 0.4);
+    box-shadow: 0 0 10px rgba(248, 113, 113, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.decline-btn:hover {
+    border-color: #fb7185;
+    text-shadow: 0 0 12px rgba(251, 113, 133, 1), 0 0 20px rgba(251, 113, 133, 0.9);
+    box-shadow: 0 0 15px rgba(251, 113, 133, 1);
+}
+
+
