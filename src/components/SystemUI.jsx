@@ -137,7 +137,7 @@ const SystemUI = () => {
                         className="min-h-screen bg-black flex items-center justify-center"
                     >
                         <div className="text-center">
-                            <p className="text-purple-400 text-2xl mb-4">Loading...</p>
+                            <p className="text-purple-400 text-2xl mb-4">ARISE...</p>
                             {/* ✅ Moving Loading Bar */}
                             <div className="relative w-96 h-4 bg-gray-800 rounded-md overflow-hidden">
                                 <motion.div

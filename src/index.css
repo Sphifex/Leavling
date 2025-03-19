@@ -143,3 +143,24 @@
     box-shadow: 0 0 20px rgba(192, 132, 252, 1);
 }
 
+
+
+/* skils page */
+
+/* Blue Glow Effect for Skills Page Text */
+.skills-glow {
+    text-shadow: 0 0 10px rgba(0, 183, 255, 1), 0 0 20px rgba(0, 183, 255, 0.7);
+}
+
+/* Adjust Glow for Different Colors */
+.text-purple-300.skills-glow {
+    text-shadow: 0 0 10px rgba(0, 183, 255, 1), 0 0 20px rgba(0, 183, 255, 0.7);
+}
+
+.text-gray-400.skills-glow {
+    text-shadow: 0 0 5px rgba(0, 183, 255, 1), 0 0 10px rgba(0, 183, 255, 0.5);
+}
+
+.glow-glow {
+    text-shadow: 0 0 10px rgba(94, 6, 216, 1), 0 0 20px rgba(94, 6, 216, 0.7);
+}
