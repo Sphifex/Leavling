@@ -12,7 +12,9 @@
         "framer-motion": "^12.5.0",
         "ionicons": "^7.4.0",
         "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "react-dom": "^18.0.0",
+        "react-icons": "^5.5.0",
+        "react-router-dom": "^7.4.0"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.0.0",

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import HomePage from "./HomePage"; // Import HomePage component
 
 const SystemUI = () => {
+    const navigate = useNavigate(); // ✅ Use React Router for navigation
     const [showNotification, setShowNotification] = useState(true);
     const [text, setText] = useState("");
     const [loading, setLoading] = useState(false);
-    const [showHomePage, setShowHomePage] = useState(false); // Control Home Page visibility
     const [progress, setProgress] = useState(0); // Loading bar progress
 
     const message = "Your heart will stop in 0.02 seconds\nif you chose not to accept. \nWill you accept?";
@@ -28,7 +28,7 @@ const SystemUI = () => {
         }
     }, [showNotification]);
 
-    // Handle accept button - Transition to Home Page
+    // ✅ Handle accept button - Navigate to Home Page after loading animation
     const handleAccept = () => {
         setShowNotification(false);
         setLoading(true);
@@ -40,7 +40,7 @@ const SystemUI = () => {
                 if (prev >= 100) {
                     clearInterval(interval);
                     setLoading(false);
-                    setShowHomePage(true); // Show Home Page after loading
+                    navigate("/home"); // ✅ Redirect to Home Page
                     return 100;
                 }
                 return prev + 5; // Adjust speed here
@@ -48,7 +48,7 @@ const SystemUI = () => {
         }, 100); // Adjust speed by changing interval time
     };
 
-    // Handle decline button - Redirects to YouTube
+    // ✅ Handle decline button - Redirects to YouTube
     const handleDecline = () => {
         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
     };
@@ -56,9 +56,7 @@ const SystemUI = () => {
     return (
         <div className="min-h-screen bg-black flex items-center justify-center relative">
             <AnimatePresence>
-                {showHomePage ? (
-                    <HomePage /> // ✅ Show Home Page after transition
-                ) : showNotification ? (
+                {showNotification ? (
                     <div className="relative flex items-center justify-center">
                         {/* ✅ Extended Top Bezel */}
                         <div className="absolute top-[-40px] left-[-30px] w-[800px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[10deg] flicker z-50"></div>
@@ -144,7 +142,7 @@ const SystemUI = () => {
                                     className="h-full bg-purple-500"
                                     initial={{ width: "0%" }}
                                     animate={{ width: `${progress}%` }}
-                                    transition={{ duration: .09, ease: "linear" }}
+                                    transition={{ duration: 0.09, ease: "linear" }}
                                 />
                             </div>
                         </div>

@@ -39,9 +39,9 @@ const HomePopup = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0 flex items-center justify-center pointer-events-none z-40"
+            className="absolute inset-0 flex items-center justify-center pointer-events-none z-40  "
         >
-            <div className="relative p-8 w-[750px] h-[350px] text-center system-message overflow-hidden pointer-events-auto">
+            <div className="relative p-8 w-[750px] h-[350px] text-center system-message overflow-hidden pointer-events-auto flicker">
                 {/* Background Video - Zoomed In & Moves with Mouse */}
                 <motion.video
                     autoPlay
@@ -68,12 +68,12 @@ const HomePopup = () => {
                 <div className="absolute bottom-[-35px] left-[-120px] right-[-20px] mx-auto h-8 w-[135%] bg-purple-300 opacity-30 blur-lg transform skew-x-[-5deg] flicker"></div> */}
 
                 {/* Notification Header */}
-                <div className="relative text-white text-lg font-bold tracking-widest neon-text uppercase border border-purple-400 px-4 py-2 inline-block bg-purple-900 bg-opacity-20 z-30">
+                <div className="relative text-white text-lg font-bold tracking-widest neon-text uppercase border border-purple-400 px-4 py-2 inline-block bg-purple-900 bg-opacity-20 z-30 flicker">
                     SYSTEM MESSAGE
                 </div>
 
                 {/* System Message */}
-                <p className="relative mt-6 text-red-400 text-lg typing-effect z-30">{text}</p>
+                <p className="relative mt-6 glowing-text text-red-400 text-lg typing-effect z-30">{text}</p>
             </div>
         </motion.div>
     );

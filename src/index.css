@@ -176,3 +176,58 @@
 .flicker-border {
     animation: flicker 1.5s infinite alternate;
 }
+
+
+
+
+/* Projects page */
+
+/* 🔥 Larger Styled Box for Projects */
+.projects-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 5px;
+    border: 3px solid rgba(128, 0, 255, 0.9);
+    box-shadow: 0 0 20px rgba(128, 0, 255, 0.7);
+    backdrop-filter: blur(5px);
+    width: 900px; /* Increased width */
+    height: 600px;
+    max-width: 90%;
+}
+
+/* 💠 Category Selection Tabs */
+.project-tab {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: 3px solid rgba(128, 0, 255, 0.8);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(128, 0, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-tab:hover {
+    background: rgba(128, 0, 255, 0.3);
+}
+
+.active-tab {
+    background: rgba(128, 0, 255, 0.6);
+    box-shadow: 0 0 5px rgba(128, 0, 255, 1);
+}
+
+/* 🔹 Individual Project Box */
+.project-box {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid rgba(128, 0, 255, 0.8);
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-box:hover {
+    box-shadow: 0 0 25px rgba(128, 0, 255, 1);
+}
+
+
