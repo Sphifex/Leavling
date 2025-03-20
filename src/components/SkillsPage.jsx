@@ -9,7 +9,7 @@ const skills = [
     { name: "Tailwind CSS", years: 1 },
     { name: "PostCSS", years: 2 },
     { name: "WordPress", years: 3 },
-    { name: "UI/UX Design", years: 4 }
+    // { name: "UI/UX Design", years: 4 }
 ];
 
 const SkillsPage = () => {

@@ -37,18 +37,26 @@ const ProjectsPage = () => {
 
                 {/* 🔥 Category Selection Buttons */}
                 <div className="flex justify-center space-x-6 mb-6">
-                    <button
-                        className={`project-tab ${selectedCategory === "personal" ? "active-tab" : ""}`}
-                        onClick={() => setSelectedCategory("personal")}
-                    >
-                        Personal Projects
-                    </button>
-                    <button
-                        className={`project-tab ${selectedCategory === "client" ? "active-tab" : ""}`}
-                        onClick={() => setSelectedCategory("client")}
-                    >
-                        Client Projects
-                    </button>
+                <button 
+    className={`px-6 py-3 skills-glow text-white border border-purple-500 rounded-md transition-all relative 
+                before:absolute before:inset-0 before:border-2 before:border-purple-500 before:rounded-md 
+                before:opacity-50 before:transition-all hover:before:opacity-100 hover:before:shadow-red-500 flicker 
+                ${selectedCategory === "personal" ? "active-tab" : ""}`}
+    onClick={() => setSelectedCategory("personal")}
+>
+    Personal Projects
+</button>
+
+                    <button 
+    className={`px-6 py-3 skills-glow text-white border border-purple-500 rounded-md transition-all relative 
+                before:absolute before:inset-0 before:border-2 before:border-purple-500 before:rounded-md 
+                before:opacity-50 before:transition-all hover:before:opacity-100 hover:before:shadow-green-500 flicker 
+                ${selectedCategory === "client" ? "active-tab" : ""}`}
+    onClick={() => setSelectedCategory("client")}
+>
+    Client Projects
+</button>
+
                 </div>
 
                 {/* 🔥 Projects Section */}
