@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-    { name: "HTML", years: 8 },
-    { name: "CSS", years: 8 },
-    { name: "JavaScript", years: 6 },
-    { name: "React", years: 5 },
-    { name: "Tailwind CSS", years: 4 },
-    { name: "PostCSS", years: 3 },
-    { name: "WordPress", years: 5 },
+    { name: "HTML", years: 3 },
+    { name: "CSS", years: 3 },
+    { name: "JavaScript", years: 2 },
+    { name: "React", years: 1 },
+    { name: "Tailwind CSS", years: 1 },
+    { name: "PostCSS", years: 2 },
+    { name: "WordPress", years: 3 },
     { name: "UI/UX Design", years: 4 }
 ];
 
@@ -56,14 +56,14 @@ const SkillsPage = () => {
                             </div>
 
                             {/* XP Bar - Solid Color with Glow */}
-                            <div className="w-full h-5 bg-gray-800 rounded-full border border-purple-700 mt-1 relative overflow-hidden">
+                            <div className="w-full h-5 bg-gray-800 rounded-full border border-blue-700 mt-1 relative overflow-hidden">
                                 <motion.div
-                                    className="h-full bg-purple-900"
+                                    className="h-full bg-blue-900"
                                     initial={{ width: "0%" }}
                                     animate={{ width: `${(skill.years / 10) * 100}%` }}
                                     transition={{ duration: 1.5, ease: "easeOut" }}
                                     style={{
-                                        boxShadow: "0px 0px 10px purple, 0px 0px 20px purple"
+                                        boxShadow: "0px 0px 10px blue, 0px 0px 20px pink"
                                     }}
                                 />
                             </div>

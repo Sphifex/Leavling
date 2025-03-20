@@ -34,8 +34,9 @@ const AboutPage = () => {
 
             {/* Holographic Status Box */}
             <div className="relative z-20 p-8 w-[850px] h-[500px] text-center system-message holographic-box">
+                
                 {/* Top Bezel */}
-                <div className="absolute top-[-30px] left-[-50px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[10deg] flicker"></div>
+                <div className="absolute top-[-50px] left-[-30px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[10deg] flicker"></div>
 
                 {/* Profile + Contact Section */}
                 <div className="flex items-center justify-between px-6">
@@ -44,32 +45,32 @@ const AboutPage = () => {
                         <img
                             src="/images/profile.jpg" // Replace with actual profile pic
                             alt="Profile"
-                            className="w-28 h-28 rounded-full border-4 border-purple-500 shadow-lg"
+                            className="w-28 h-28 rounded-full border-4 border-purple-700 shadow-lg flicker"
                         />
-                        <h1 className="text-3xl font-bold mt-3 neon-text">Rylee Pritchard</h1>
-                        <p className="text-purple-300 text-lg mt-1">Class: Front-End Developer</p>
+                        <h1 className="text-3xl font-bold mt-3 skills-glow">Rylee Pritchard</h1>
+                        <p className=" glowing-text text-red-800 text-lg mt-1">Class: Front-End Developer</p>
                     </div>
 
                     {/* Contact & Social Links */}
                     <div className="w-1/2 text-left">
-                        <h2 className="text-xl font-bold text-purple-400">Contact Info</h2>
-                        <p className="mt-2 flex items-center text-gray-300">
-                            <FaEnvelope className="mr-2 text-purple-400" /> rylee@example.com
+                        <h2 className="text-xl font-bold skills-glow text-white">Contact Me</h2>
+                        <p className="mt-2 flex items-center text-white">
+                            <FaEnvelope className="mr-2 text-purple-400" /> ryleepritchard7@gmail.com
                         </p>
-                        <p className="mt-2 flex items-center text-gray-300">
+                        <p className="mt-2 flex items-center text-white">
                             <FaLinkedin className="mr-2 text-blue-400" /> 
-                            <a href="https://linkedin.com/in/rylee" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            <a href="https://www.linkedin.com/in/rylee-pritchard-a43991349/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                                 LinkedIn Profile
                             </a>
                         </p>
                         <p className="mt-2 flex items-center text-gray-300">
-                            <FaGithub className="mr-2 text-gray-400" /> 
-                            <a href="https://github.com/rylee" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            <FaGithub className="mr-2 text-white" /> 
+                            <a href="https://github.com/Sphifex" target="_blank" rel="noopener noreferrer" className="hover:underline">
                                 GitHub
                             </a>
                         </p>
-                        <p className="mt-4 flex items-center text-gray-300">
-                            <FaFileDownload className="mr-2 text-green-400" /> 
+                        <p className="mt-4 flex items-center glowing-text text-red-300">
+                            <FaFileDownload className=" mr-2 glowing-text text-red-800 flicker" /> 
                             <a href="/resume.pdf" download className="hover:underline">
                                 Download Resume
                             </a>
@@ -79,13 +80,13 @@ const AboutPage = () => {
 
                 {/* Technology Skills Display */}
                 <div className="mt-5 text-center">
-                    <h2 className="text-xl font-bold text-purple-400">Most Used Technologies</h2>
+                    <h2 className="text-xl font-bold skills-glow text-white">Most Used Technologies</h2>
                     <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 mt-3">
                         {techLogos.map((tech, index) => (
                             <motion.div
                                 key={index}
                                 whileHover={{ scale: 1.1 }}
-                                className="flex flex-col items-center p-4 bg-black bg-opacity-0 rounded-lg border border-purple-500 shadow-lg"
+                                className="flex flex-col items-center p-4 bg-black bg-opacity-0 rounded-lg border border-purple-500 shadow-lg "
                             >
                                 <div className="text-4xl">{tech.icon}</div> {/* Icon */}
                                 <p className="mt-2 text-sm text-purple-300">{tech.name}</p>
@@ -97,14 +98,14 @@ const AboutPage = () => {
                 {/* Personal Interests Button */}
                 <motion.button
                     whileHover={{ scale: 1.1 }}
-                    className="mt-6 px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-lg transition-all hover:bg-purple-500 hover:text-white"
+                    className="mt-6 px-6 py-3 border-2 border-red-500 text-red-400 rounded-lg transition-all hover:bg-purple-700 hover:text-white flicker"
                     onClick={() => alert("Personal Interests Section Coming Soon!")}
                 >
                     View Personal Interests
                 </motion.button>
 
                 {/* Bottom Bezel */}
-                <div className="absolute bottom-[-30px] left-[-50px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker"></div>
+                <div className="absolute bottom-[-50px] left-[-30px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker"></div>
             </div>
         </div>
     );
