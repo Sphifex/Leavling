@@ -62,23 +62,36 @@ const ProjectsPage = () => {
                 {/* 🔥 Projects Section */}
                 <div className="grid grid-cols-1 gap-6">
                     
-                    {/* 🔹 Personal Projects */}
-                    {selectedCategory === "personal" && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <motion.div 
-                                whileHover={{ scale: 1.05 }} 
-                                className="project-box cursor-pointer"
-                                onClick={() => navigate("/projects/portfolio")}
-                            >
-                                <h3 className="text-lg font-bold text-purple-300">Portfolio Website</h3>
-                                <p className="text-gray-300 text-sm mt-2">My Solo Leveling-inspired portfolio.</p>
-                            </motion.div>
-                        </motion.div>
-                    )}
+                   {/* 🔹 Personal Projects */}
+{selectedCategory === "personal" && (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="space-y-6"
+    >
+        {/* Portfolio Project */}
+        <motion.div 
+            whileHover={{ scale: 1.05 }} 
+            className="project-box cursor-pointer"
+            onClick={() => navigate("/projects/portfolio")}
+        >
+            <h3 className="text-lg font-bold text-purple-300">Portfolio Website</h3>
+            <p className="text-gray-300 text-sm mt-2">My Solo Leveling-inspired portfolio.</p>
+        </motion.div>
+
+        {/* 🆕 New Personal Project */}
+        <motion.div 
+            whileHover={{ scale: 1.05 }} 
+            className="project-box cursor-pointer"
+            onClick={() => navigate("/projects/projects1")}
+        >
+            <h3 className="text-lg font-bold text-purple-300">Personal Project 1</h3>
+            <p className="text-gray-300 text-sm mt-2">This is a test or starter project to expand my portfolio.</p>
+        </motion.div>
+    </motion.div>
+)}
+
 
                     {/* 🔹 Client Projects */}
                     {selectedCategory === "client" && (

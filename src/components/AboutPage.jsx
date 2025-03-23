@@ -16,6 +16,7 @@ const AboutPage = () => {
     ];
 
     return (
+        
         <div className="relative min-h-screen flex flex-col items-center justify-center text-white">
             {/* Background Video */}
             <video
@@ -34,9 +35,13 @@ const AboutPage = () => {
 
             {/* Holographic Status Box */}
             <div className="relative z-20 p-8 w-[850px] h-[500px] text-center system-message holographic-box">
-                
+            
+
+
                 {/* Top Bezel */}
                 <div className="absolute top-[-50px] left-[-30px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[10deg] flicker"></div>
+
+
 
                 {/* Profile + Contact Section */}
                 <div className="flex items-center justify-between px-6">
@@ -105,6 +110,8 @@ const AboutPage = () => {
                 </motion.button>
 
                 {/* Bottom Bezel */}
+                
+                
                 <div className="absolute bottom-[-50px] left-[-30px] w-[900px] h-12 bg-[#400167] opacity-80 shadow-lg transform skew-x-[-10deg] flicker"></div>
             </div>
         </div>
