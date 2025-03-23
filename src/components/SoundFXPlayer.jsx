@@ -26,7 +26,7 @@ const SoundFXPlayer = () => {
     if (cooldown) return;
 
     setCooldown(true);
-    setTimeout(() => setCooldown(false), 3000); // ⏱ 3 seconds delay
+    setTimeout(() => setCooldown(false), 2500); // ⏱ 2.5 seconds delay
 
     const totalWeight = sounds.reduce((sum, sound) => sum + sound.weight, 0);
     const rand = Math.random() * totalWeight;
@@ -45,7 +45,7 @@ const SoundFXPlayer = () => {
 
   return (
     <div className="w-full mb-4 p-4 border border-purple-700 bg-black bg-opacity-20 shadow-lg text-center flicker">
-      <h2 className="text-purple-400 font-bold mb-2">🎧 Arise RNG</h2>
+      <h2 className="text-purple-400 font-bold mb-2"> Arise RNG</h2>
       <button
         onClick={playRandomSound}
         disabled={cooldown}
