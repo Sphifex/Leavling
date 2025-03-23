@@ -89,6 +89,16 @@ const ProjectsPage = () => {
             <h3 className="text-lg font-bold text-purple-300">Personal Project 1</h3>
             <p className="text-gray-300 text-sm mt-2">This is a test or starter project to expand my portfolio.</p>
         </motion.div>
+
+        <motion.div 
+            whileHover={{ scale: 1.05 }} 
+            className="project-box cursor-pointer"
+            onClick={() => navigate("/projects/projects2")}
+        >
+            <h3 className="text-lg font-bold text-purple-300">Personal Project 2</h3>
+            <p className="text-gray-300 text-sm mt-2">This is a test or starter project to expand my portfolio.</p>
+        </motion.div>
+
     </motion.div>
 )}
 

@@ -9,7 +9,7 @@ import PortfolioProject from "./components/projects/PortfolioProject";
 import WellspringProject from "./components/projects/WellspringProject";
 import Navbar from "./components/Navbar"; // ✅ Global Navbar import
 import Projects1 from "./components/projects/Projects1";
-
+import Projects2 from "./components/projects/Projects2";
 
 
 
@@ -41,7 +41,7 @@ const AppContent = () => {
                 <Route path="/projects/portfolio" element={<PortfolioProject />} />
                 <Route path="/projects/wellspring" element={<WellspringProject />} />
                 <Route path="/projects/projects1" element={<Projects1 />} />
-
+                <Route path="/projects/projects2" element={<Projects2 />} />
 
             </Routes>
         </div>
