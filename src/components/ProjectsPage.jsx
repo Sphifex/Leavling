@@ -21,7 +21,7 @@ const ProjectsPage = () => {
             </video>
 
             {/* Overlay to Darken Background */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
             {/* 🔥 Main Container for Projects */}
             <motion.div

@@ -41,8 +41,8 @@ const Navbar = () => {
                     <motion.button
                         key={index}
                         whileTap={{ scale: 0.95 }}
-                        className="text-[10px] px-4 py-2 text-purple-300 border border-purple-500 rounded-md relative transition-all flicker
-                            before:absolute before:inset-0 before:border-2 before:border-purple-500 before:rounded-md 
+                        className="text-[10px] px-4 py-2 text-purple-300 border border-purple-500  relative transition-all flicker
+                            before:absolute before:inset-0 before:border-2 before:border-purple-500 before: 
                             before:opacity-40 before:transition-all hover:before:opacity-100 hover:before:shadow-purple-500"
                         onClick={() => navigate(`/${page}`)}
                     >

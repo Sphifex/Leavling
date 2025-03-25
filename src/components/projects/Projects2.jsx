@@ -20,7 +20,7 @@ const Projects2 = () => {
             </video>
 
             {/* 🕶️ Dark Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
             {/* 📦 Project Details Box */}
             <div className="relative z-20 w-[1000px] h-[800px] p-10 text-center bg-black bg-opacity-50 border border-purple-500 shadow-xl rounded-lg flicker">
